@@ -10,7 +10,7 @@ function BoxDays(props) {
          )
        })
     }
-</div>)
+  </div>)
 
 } 
     

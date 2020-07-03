@@ -1,5 +1,5 @@
 body {
-  font: 2rem sans-serif;
+  font: 1rem sans-serif;
 }
 
 div.box-days {
@@ -17,3 +17,8 @@ div.day {
   border-color: #585858;
   text-align: center;
 } 
+
+.app-header {
+  background-color: rgb(93, 93, 252);
+  color: white;
+}
