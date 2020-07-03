@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import BoxDays from './components/BoxDays'
 
 function App() {
+
+  function fillArrayDays(offsetMonth) {
+    const now = new Date()
+    const monthRu = ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь']
+    const dateFirstDay = new Date(now.getFullYear(), now.getMonth()+offsetMonth, 1)
+
+    const headerDate = {month: monthRu[dateFirstDay.getMonth()], 
+                        year: dateFirstDay.getFullYear().toString()}
+
+    const offsetStart = [-5,-6, 0,-1,-2,-3,-4]
+    const start = offsetStart[dateFirstDay.getDay()]
+    const end = start + 41
+    const days = []
+
+    console.log("headerDate =", headerDate)
+    console.log("date =", dateFirstDay)
+
+    
+    for(let d = start; d <= end; d++){
+      days.push({key: d, date: new Date(dateFirstDay.getFullYear(), dateFirstDay.getMonth(), d).getDate().toString()})
+    }
+
+    return days
+  }
+
+  const days = fillArrayDays(0)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BoxDays days={days}/>
   );
 }
 
