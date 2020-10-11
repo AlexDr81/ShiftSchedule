@@ -6,7 +6,7 @@ function BoxDays(props) {
     {
        props.days.map((day)=>{
          return(
-          <div className="day" key={day.key}>{day.date}</div>
+          <div className={day.decorClass} key={day.key}>{day.date}</div>
          )
        })
     }

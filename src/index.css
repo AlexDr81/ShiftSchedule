@@ -13,10 +13,45 @@ div.box-days {
 div.day {
   background-color: #dddcdc;
   border: 1px solid;
-  border-radius: 3px;
+  border-radius: 0px;
   border-color: #585858;
   text-align: center;
+  color: #5d5d5d;
 } 
+
+div.day.not_this_month {
+  background-color: #f1f1f1;
+  border-color: #9c9b9b;
+  color: #9c9b9b;
+}
+
+div.day.green {
+  background-color: #52d441;
+  border-color: #0d6b01;
+  color: #0d6b01;
+  font-weight: bolder;
+} 
+
+div.day.green.not_this_month {
+  background-color: #d1ffcb;
+  border-color: #16b901;
+  color: #16b901;
+  font-weight: normal;
+}
+
+div.day.blue {
+  background-color: #5ba7fd;
+  border-color: #0111f8;
+  color: #0111f8;
+  font-weight: bolder;
+} 
+
+div.day.blue.not_this_month {
+  background-color: #d2e7ff;
+  border-color: #6b75ff;
+  color: #6b75ff;
+  font-weight: normal;
+}
 
 .app-header {
   background-color: rgb(93, 93, 252);
